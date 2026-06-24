@@ -1,0 +1,43 @@
+/* Kelas CSS untuk tombol */
+.button {
+  /* Mengatur warna latar belakang menjadi merah muda bata (orangered) */
+  background-color: orangered;
+  /* Mengatur warna teks menjadi putih */
+  color: white;
+  /* Mengatur lebar tombol menjadi 140 pixel */
+  width: 140px;
+  /* Mengatur tinggi tombol menjadi 40 pixel */
+  height: 40px;
+  /* Menghilangkan garis tepi bawaan dari tombol */
+  border: none;
+  /* Membuat sudut tombol sedikit membulat */
+  border-radius: 5px;
+  /* Menambahkan jarak di dalam tombol */
+  padding: 5px;
+}
+
+/* Kelas CSS untuk kontainer */
+.container {
+  /* Memberikan warna latar abu-abu transparan */
+  background: rgba(0, 0, 0, 0.05);
+  /* Memberikan jarak luar sebesar 10 pixel */
+  margin: 10px;
+  /* Memberikan jarak dalam sebesar 5 pixel */
+  padding: 5px;
+}
+
+/* Kelas CSS untuk input */
+.input {
+  /* Menghilangkan garis biru saat input sedang aktif */
+  outline: none;
+  /* Menghilangkan garis tepi bawaan dari input */
+  border: none;
+  /* Mengatur warna latar input menjadi putih */
+  background: white;
+  /* Membuat sudut input sedikit membulat */
+  border-radius: 2px;
+  /* Mengatur warna teks menjadi hitam transparan */
+  color: rgba(0, 0, 0, 0.8);
+  /* Mengatur tinggi input menjadi 40 pixel */
+  height: 40px;
+}

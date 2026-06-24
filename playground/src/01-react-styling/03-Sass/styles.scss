@@ -1,0 +1,25 @@
+/* Mengimpor file scss lain (mixins) */
+@import './font-styles.scss';
+
+/* Mendefinisikan variabel Sass dengan tanda $ */
+$color-red: red;
+$color-white: #fff;
+
+/* CSS Nested (Bersarang) untuk tombol reset */
+.reset-button {
+  /* Menggunakan mixin font-style-1 yang sudah di-import */
+  @include font-style-1;
+  /* Menggunakan variabel warna merah */
+  color: $color-red;
+  /* Margin bawah 10px */
+  margin-bottom: 10px;
+
+  /* Simbol & mereferensikan elemen saat ini (.reset-button) */
+  /* Ini sama dengan .reset-button:hover */
+  &:hover {
+    /* Mengubah warna teks menggunakan variabel putih saat kursor di atasnya */
+    color: $color-white;
+    /* Memberikan latar merah saat di-hover */
+    background-color: $color-red;
+  }
+}

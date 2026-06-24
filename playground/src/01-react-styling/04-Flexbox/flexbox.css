@@ -1,0 +1,49 @@
+/* Container utama untuk Flexbox */
+.container {
+  /* Mengaktifkan flexbox pada elemen ini, membuatnya menjadi flex container */
+  display: flex;
+  /* Mengatur arah flex menjadi kolom (dari atas ke bawah) */
+  flex-direction: column;
+  /* Menengahkan elemen anak (flex items) secara horizontal (di cross axis jika arah kolom) */
+  align-items: center;
+  /* Menengahkan elemen anak secara vertikal (di main axis jika arah kolom) */
+  justify-content: center;
+  /* Memberikan sedikit batas dan tinggi agar efek flex terlihat */
+  border: 1px solid #ccc;
+  padding: 20px;
+  gap: 10px; /* Jarak antar elemen flex */
+}
+
+/* Membungkus input agar lebar maksimal */
+.wrapper {
+  /* Lebar mengambil 100% dari container */
+  width: 100%;
+}
+
+/* Elemen form yang menggunakan flex baris */
+.row-flex {
+  /* Mengaktifkan flexbox */
+  display: flex;
+  /* Jarak antar form control */
+  gap: 10px;
+  /* Membentangkan secara penuh */
+  width: 100%;
+}
+
+/* Elemen input atau box yang akan meregang */
+.flex-item {
+  /* flex-grow: 1 (meregang untuk mengisi ruang kosong), flex-shrink: 1, flex-basis: 0 */
+  flex: 1;
+  /* Padding untuk mempercantik */
+  padding: 10px;
+  /* Border sederhana */
+  border: 1px solid blue;
+}
+
+/* Elemen tombol dengan ukuran tetap di flexbox */
+.flex-fixed {
+  /* flex-grow: 0, flex-shrink: 0, ukuran dasar: 120px */
+  flex: 0 0 120px;
+  /* Padding untuk teks */
+  padding: 10px;
+}

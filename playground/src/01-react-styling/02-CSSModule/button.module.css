@@ -1,0 +1,41 @@
+/* Kelas CSS untuk tombol (menggunakan camelCase lebih disarankan di modules) */
+.button {
+  /* Warna latar belakang tombol */
+  background-color: #646cff;
+  /* Warna teks tombol */
+  color: white;
+  /* Lebar tombol */
+  width: 140px;
+  /* Tinggi tombol */
+  height: 40px;
+  /* Menghilangkan garis pinggir */
+  border: none;
+  /* Membulatkan sudut */
+  border-radius: 5px;
+}
+
+/* Kelas CSS untuk kontainer */
+.container {
+  /* Latar belakang transparan */
+  background: rgba(0, 0, 0, 0.05);
+  /* Jarak luar */
+  margin: 10px;
+  /* Jarak dalam */
+  padding: 5px;
+}
+
+/* Kelas CSS untuk input */
+.input {
+  /* Menghilangkan garis saat aktif */
+  outline: none;
+  /* Menghilangkan garis tepi */
+  border: none;
+  /* Warna latar putih */
+  background: white;
+  /* Membulatkan sudut sedikit */
+  border-radius: 2px;
+  /* Warna teks */
+  color: rgba(0, 0, 0, 0.8);
+  /* Tinggi input */
+  height: 40px;
+}

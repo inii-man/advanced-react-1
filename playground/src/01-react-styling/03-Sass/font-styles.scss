@@ -1,0 +1,14 @@
+/* 
+  Mendefinisikan mixin bernama font-style-1 
+  Mixin digunakan untuk mengelompokkan beberapa aturan CSS yang sering digunakan bersama
+*/
+@mixin font-style-1 {
+  /* Mengatur ukuran font */
+  font-size: 16pt;
+  /* Mengatur jarak antar baris */
+  line-height: 1.5;
+  /* Mengatur ketebalan font */
+  font-weight: 700;
+  /* Mengatur jarak antar huruf */
+  letter-spacing: -0.05px;
+}
