@@ -1,49 +1,100 @@
-/* Container utama untuk Flexbox */
-.container {
-  /* Mengaktifkan flexbox pada elemen ini, membuatnya menjadi flex container */
-  display: flex;
-  /* Mengatur arah flex menjadi kolom (dari atas ke bawah) */
-  flex-direction: column;
-  /* Menengahkan elemen anak (flex items) secara horizontal (di cross axis jika arah kolom) */
-  align-items: center;
-  /* Menengahkan elemen anak secara vertikal (di main axis jika arah kolom) */
-  justify-content: center;
-  /* Memberikan sedikit batas dan tinggi agar efek flex terlihat */
-  border: 1px solid #ccc;
-  padding: 20px;
-  gap: 10px; /* Jarak antar elemen flex */
+/* Container utama untuk mendemokan flexbox */
+.flex-demo-section {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #fafafa;
 }
 
-/* Membungkus input agar lebar maksimal */
-.wrapper {
-  /* Lebar mengambil 100% dari container */
-  width: 100%;
+.flex-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
 }
 
-/* Elemen form yang menggunakan flex baris */
-.row-flex {
-  /* Mengaktifkan flexbox */
+/* ========================================================
+   1. FLEX DIRECTION (Arah)
+   ======================================================== */
+.container-direction-row {
   display: flex;
-  /* Jarak antar form control */
+  flex-direction: row; /* Dari kiri ke kanan (Default) */
   gap: 10px;
-  /* Membentangkan secara penuh */
-  width: 100%;
+  background: #e8f5e9;
+  padding: 10px;
 }
 
-/* Elemen input atau box yang akan meregang */
-.flex-item {
-  /* flex-grow: 1 (meregang untuk mengisi ruang kosong), flex-shrink: 1, flex-basis: 0 */
-  flex: 1;
-  /* Padding untuk mempercantik */
+.container-direction-column {
+  display: flex;
+  flex-direction: column; /* Dari atas ke bawah */
+  gap: 10px;
+  background: #e3f2fd;
   padding: 10px;
-  /* Border sederhana */
-  border: 1px solid blue;
 }
 
-/* Elemen tombol dengan ukuran tetap di flexbox */
-.flex-fixed {
-  /* flex-grow: 0, flex-shrink: 0, ukuran dasar: 120px */
-  flex: 0 0 120px;
-  /* Padding untuk teks */
+/* ========================================================
+   2. JUSTIFY CONTENT (Penataan di Main Axis / Horizontal)
+   ======================================================== */
+.container-justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Membuat jarak di antara elemen sama besar */
+  background: #fff3e0;
   padding: 10px;
+}
+
+.container-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Menengahkan elemen */
+  background: #f3e5f5;
+  padding: 10px;
+}
+
+/* ========================================================
+   3. ALIGN ITEMS (Penataan di Cross Axis / Vertikal)
+   ======================================================== */
+.container-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Menengahkan elemen secara vertikal */
+  height: 150px; /* Tinggi agar align-items terlihat efeknya */
+  background: #ffebee;
+  padding: 10px;
+}
+
+/* ========================================================
+   4. FLEX WRAP & ITEM PROPERTIES (Menurun jika penuh)
+   ======================================================== */
+.container-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Item akan turun ke baris baru jika ruang tidak cukup */
+  gap: 10px;
+  background: #e0f7fa;
+  padding: 10px;
+}
+
+/* Elemen kotak/item dasar untuk demo */
+.box {
+  background-color: #ff9800;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Item yang membesar mengisi ruang sisa (flex-grow) */
+.box-grow {
+  flex-grow: 1; /* Akan mengisi sisa ruang yang ada di baris ini */
+  background-color: #4caf50;
+}
+
+/* Item dengan urutan diubah (order) */
+.box-order {
+  order: -1; /* Tampil pertama kali, meskipun di koding ditaruh di akhir */
+  background-color: #2196f3;
 }

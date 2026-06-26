@@ -1,5 +1,5 @@
 /* Mengimpor file scss lain (mixins) */
-@import './font-styles.scss';
+@use './font-styles.scss' as *;
 
 /* Mendefinisikan variabel Sass dengan tanda $ */
 $color-red: red;

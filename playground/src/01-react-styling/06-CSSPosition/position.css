@@ -1,0 +1,77 @@
+/* 
+  Contoh penggunaan CSS Position
+*/
+
+/* Kontainer dengan posisi relatif agar elemen absolute di dalamnya bisa berpatokan ke sini */
+.position-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #f0f0f0;
+  border: 2px dashed #999;
+  overflow: auto; /* Untuk melihat efek sticky dan fixed saat di-scroll */
+  margin-bottom: 20px;
+}
+
+/* 1. Static (Default) - Mengikuti alur dokumen normal */
+.box-static {
+  position: static;
+  background-color: #646cff;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+/* 2. Relative - Mengikuti alur normal, tapi bisa digeser dari posisi aslinya */
+.box-relative {
+  position: relative;
+  top: 20px; /* Digeser 20px ke bawah dari posisi awalnya */
+  left: 20px; /* Digeser 20px ke kanan dari posisi awalnya */
+  background-color: #42b883;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+/* 3. Absolute - Terlepas dari alur normal, berpatokan pada elemen induk terdekat yang posisinya tidak static (dalam hal ini .position-container) */
+.box-absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e44d26;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  /* Box ini tidak mempengaruhi posisi box lainnya */
+}
+
+/* 4. Sticky - Bertindak seperti relative sampai batas tertentu saat di-scroll, lalu menjadi fixed */
+.box-sticky {
+  position: sticky;
+  top: 0; /* Akan menempel di atas (top: 0) saat halaman di-scroll melewati elemen ini */
+  background-color: #f7df1e;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Memperpanjang kontainer agar bisa di-scroll untuk demo sticky */
+.scroll-space {
+  height: 600px;
+  background: repeating-linear-gradient(
+    45deg,
+    #e5e5f7,
+    #e5e5f7 10px,
+    #f0f0f0 10px,
+    #f0f0f0 20px
+  );
+  margin: 10px;
+  padding: 10px;
+  color: #666;
+}

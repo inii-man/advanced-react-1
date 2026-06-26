@@ -9,6 +9,8 @@ import { CSSModuleExample } from './01-react-styling/02-CSSModule/CSSModuleExamp
 import { SassExample } from './01-react-styling/03-Sass/SassExample'
 import { FlexboxExample } from './01-react-styling/04-Flexbox/FlexboxExample'
 import { StyledComponentsExample } from './01-react-styling/05-StyledComponents/StyledComponentsExample'
+import { CSSPositionExample } from './01-react-styling/06-CSSPosition/CSSPositionExample'
+import { RouterApp } from './02-spa-routing/RouterApp'
 
 // Komponen utama aplikasi
 function App() {
@@ -31,8 +33,20 @@ function App() {
         <button onClick={() => setActiveTab('sass')}>Sass (SCSS)</button>
         {/* Tombol untuk membuka tab Flexbox */}
         <button onClick={() => setActiveTab('flexbox')}>Flexbox</button>
+        {/* Tombol untuk membuka tab CSS Position */}
+        <button onClick={() => setActiveTab('css-position')}>CSS Position</button>
         {/* Tombol untuk membuka tab Styled Components */}
         <button onClick={() => setActiveTab('styled-components')}>Styled Components</button>
+      </div>
+
+      <div className="tabs" style={{ marginTop: '10px' }}>
+        {/* Tombol untuk membuka tab Modul 2 */}
+        <button 
+          onClick={() => setActiveTab('spa-routing')}
+          style={{ backgroundColor: activeTab === 'spa-routing' ? '#cce5ff' : '' }}
+        >
+          Modul 2: SPA & Routing
+        </button>
       </div>
 
       {/* Area konten tempat komponen yang aktif ditampilkan */}
@@ -68,12 +82,32 @@ function App() {
             <FlexboxExample />
           </div>
         )}
+
+        {/* Menampilkan komponen CSSPositionExample jika activeTab bernilai 'css-position' */}
+        {activeTab === 'css-position' && (
+          <div>
+            <h2>5. CSS Position</h2>
+            <CSSPositionExample />
+          </div>
+        )}
         
         {/* Menampilkan komponen StyledComponentsExample jika activeTab bernilai 'styled-components' */}
         {activeTab === 'styled-components' && (
           <div>
-            <h2>5. Styled Components</h2>
+            <h2>6. Styled Components</h2>
             <StyledComponentsExample />
+          </div>
+        )}
+
+        {/* Menampilkan Modul 2: SPA & Routing */}
+        {activeTab === 'spa-routing' && (
+          <div style={{ textAlign: 'left' }}>
+            <h2 style={{ textAlign: 'center' }}>Modul 2: SPA & React Router</h2>
+            <div style={{ padding: '15px', backgroundColor: '#fff3cd', color: '#856404', marginBottom: '20px', borderRadius: '5px' }}>
+              <strong>Catatan Playground:</strong> Saat kamu mengklik link di menu Navigasi bawah ini, perhatikan URL di browsermu berubah (misal menjadi <code>/about</code> atau <code>/contact</code>), tetapi halaman ini tidak <i>me-refresh</i>. Inilah kekuatan SPA!
+              <br/><br/><i>Tapi hati-hati: jika kamu melakukan refresh paksa (F5) pada URL <code>/about</code>, tab playground ini akan kembali ke Modul 1 (Default).</i>
+            </div>
+            <RouterApp />
           </div>
         )}
       </div>

@@ -26,13 +26,28 @@ Sass adalah versi "super" dari CSS. File-nya berakhiran `.scss` atau `.sass`.
   - **Variabel**: Kita bisa menyimpan warna ke dalam variabel `$warna-merah: red;`.
   - **Mixins**: Bisa menyimpan kumpulan style untuk dipakai ulang dengan `@mixin` dan `@include`.
 
-## 4. CSS Flexbox
-Flexbox bukanlah alat (tool), melainkan teknik penataan elemen (layout) dalam CSS modern.
-- **Konsep Dasar**: Ada elemen induk yang disebut *flex container* (`display: flex;`) dan elemen di dalamnya disebut *flex item*.
-- **Arah (Axis)**: Flexbox bekerja di satu arah utama (baris ke samping atau kolom ke bawah) menggunakan properti `flex-direction`.
-- Sangat bagus untuk membuat elemen berada di tengah-tengah layar dengan mudah (`justify-content: center` & `align-items: center`).
+## 4. 🌟 CSS Flexbox (SUPER PENTING!) 🌟
+Flexbox bukanlah sekadar *tool*, melainkan teknik *layouting* paling kuat di CSS modern. Hampir semua web modern menggunakan Flexbox untuk mengatur posisi elemen!
+- **Konsep Utama**: Ada elemen induk (*flex container*) dengan `display: flex;` dan elemen di dalamnya (*flex items*).
+- **Arah (Flex Direction)**: 
+  - `row`: Baris dari kiri ke kanan (Default).
+  - `column`: Kolom dari atas ke bawah.
+- **Distribusi Jarak (Justify Content)**: 
+  - `center`: Semua elemen ke tengah.
+  - `space-between`: Menyebar elemen agar rapat ke ujung kiri dan kanan.
+- **Penataan Vertikal (Align Items)**:
+  - `center`: Menengahkah elemen secara vertikal (silang sumbu).
+*Kombinasi `justify-content: center` & `align-items: center` adalah cara instan membuat posisi "tengah sempurna" (perfect center).*
 
-## 5. Styled-Components (CSS-in-JS)
+## 5. 📌 CSS Position (Absolute, Relative, Sticky, Fixed) 📌
+Kadang kita butuh elemen keluar dari aliran normal (misalnya melayang, menempel di atas layar, dll). Ini diatur dengan `position`.
+- **static**: Normal, mengalir dari atas ke bawah. (Default)
+- **relative**: Masih di alur normal, tapi bisa digeser menggunakan `top`, `bottom`, `left`, `right`.
+- **absolute**: Melayang bebas! Dia akan mencari induk terdekat yang posisinya tidak *static* untuk dijadikan patokan koordinat.
+- **fixed**: Menempel permanen di layar komputer/HP, meskipun halaman di-scroll (seperti tombol chat di pojok bawah).
+- **sticky**: Bertindak seperti normal, tapi saat kita men-scroll melewatinya, dia akan "menempel" di atas layar (sangat cocok untuk menu header).
+
+## 6. Styled-Components (CSS-in-JS)
 Pendekatan ini membolehkan kita menulis CSS *di dalam* file JavaScript menggunakan fitur bawaan JS bernama *Tagged Template Literals* (simbol backtick `` ` ``).
 - **Kelebihan**: Gaya bisa langsung menyesuaikan State dari React (dinamis).
 - **Cara kerja**: Kita membuat *React Component* khusus yang tugas utamanya adalah memberikan styling, contohnya:
