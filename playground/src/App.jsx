@@ -11,6 +11,7 @@ import { FlexboxExample } from './01-react-styling/04-Flexbox/FlexboxExample'
 import { StyledComponentsExample } from './01-react-styling/05-StyledComponents/StyledComponentsExample'
 import { CSSPositionExample } from './01-react-styling/06-CSSPosition/CSSPositionExample'
 import { RouterApp } from './02-spa-routing/RouterApp'
+import { AsyncPromiseApp } from './03-async-promise/AsyncPromiseApp'
 
 // Komponen utama aplikasi
 function App() {
@@ -46,6 +47,13 @@ function App() {
           style={{ backgroundColor: activeTab === 'spa-routing' ? '#cce5ff' : '' }}
         >
           Modul 2: SPA & Routing
+        </button>
+        {/* Tombol untuk membuka tab Modul 3 */}
+        <button 
+          onClick={() => setActiveTab('async-promise')}
+          style={{ backgroundColor: activeTab === 'async-promise' ? '#cce5ff' : '' }}
+        >
+          Modul 3: Async & Promise
         </button>
       </div>
 
@@ -108,6 +116,13 @@ function App() {
               <br/><br/><i>Tapi hati-hati: jika kamu melakukan refresh paksa (F5) pada URL <code>/about</code>, tab playground ini akan kembali ke Modul 1 (Default).</i>
             </div>
             <RouterApp />
+          </div>
+        )}
+
+        {/* Menampilkan Modul 3: Async & Promise */}
+        {activeTab === 'async-promise' && (
+          <div>
+            <AsyncPromiseApp />
           </div>
         )}
       </div>
