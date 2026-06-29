@@ -19,7 +19,8 @@
    ======================================================== */
 .container-direction-row {
   display: flex;
-  flex-direction: row; /* Dari kiri ke kanan (Default) */
+  flex-direction: row;
+  /* Dari kiri ke kanan (Default) */
   gap: 10px;
   background: #e8f5e9;
   padding: 10px;
@@ -27,7 +28,8 @@
 
 .container-direction-column {
   display: flex;
-  flex-direction: column; /* Dari atas ke bawah */
+  flex-direction: column;
+  /* Dari atas ke bawah */
   gap: 10px;
   background: #e3f2fd;
   padding: 10px;
@@ -39,7 +41,8 @@
 .container-justify {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Membuat jarak di antara elemen sama besar */
+  justify-content: space-between;
+  /* Membuat jarak di antara elemen sama besar */
   background: #fff3e0;
   padding: 10px;
 }
@@ -47,7 +50,8 @@
 .container-center {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Menengahkan elemen */
+  justify-content: center;
+  /* Menengahkan elemen */
   background: #f3e5f5;
   padding: 10px;
 }
@@ -59,8 +63,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; /* Menengahkan elemen secara vertikal */
-  height: 150px; /* Tinggi agar align-items terlihat efeknya */
+  align-items: center;
+  /* Menengahkan elemen secara vertikal */
+  height: 150px;
+  /* Tinggi agar align-items terlihat efeknya */
   background: #ffebee;
   padding: 10px;
 }
@@ -71,7 +77,8 @@
 .container-wrap {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Item akan turun ke baris baru jika ruang tidak cukup */
+  flex-wrap: wrap;
+  /* Item akan turun ke baris baru jika ruang tidak cukup */
   gap: 10px;
   background: #e0f7fa;
   padding: 10px;
@@ -89,12 +96,14 @@
 
 /* Item yang membesar mengisi ruang sisa (flex-grow) */
 .box-grow {
-  flex-grow: 1; /* Akan mengisi sisa ruang yang ada di baris ini */
+  flex-grow: 1;
+  /* Akan mengisi sisa ruang yang ada di baris ini */
   background-color: #4caf50;
 }
 
 /* Item dengan urutan diubah (order) */
 .box-order {
-  order: -1; /* Tampil pertama kali, meskipun di koding ditaruh di akhir */
+  order: -1;
+  /* Tampil pertama kali, meskipun di koding ditaruh di akhir */
   background-color: #2196f3;
 }

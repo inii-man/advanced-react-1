@@ -28,11 +28,11 @@ export default function PageLayout({ header, children }) {
     <Layout>
       {/* Menampilkan menu navigasi di bagian atas */}
       <Navigation />
-      
+
       <header style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2>{header}</h2>
       </header>
-      
+
       {/* Tempat di mana konten spesifik halaman akan ditampilkan */}
       <Content>{children}</Content>
     </Layout>

@@ -12,6 +12,7 @@ import { StyledComponentsExample } from './01-react-styling/05-StyledComponents/
 import { CSSPositionExample } from './01-react-styling/06-CSSPosition/CSSPositionExample'
 import { RouterApp } from './02-spa-routing/RouterApp'
 import { AsyncPromiseApp } from './03-async-promise/AsyncPromiseApp'
+import { StateManagementApp } from './04-state-management/StateManagementApp'
 
 // Komponen utama aplikasi
 function App() {
@@ -54,6 +55,13 @@ function App() {
           style={{ backgroundColor: activeTab === 'async-promise' ? '#cce5ff' : '' }}
         >
           Modul 3: Async & Promise
+        </button>
+        {/* Tombol untuk membuka tab Modul 4 */}
+        <button 
+          onClick={() => setActiveTab('state-management')}
+          style={{ backgroundColor: activeTab === 'state-management' ? '#cce5ff' : '' }}
+        >
+          Modul 4: State Management
         </button>
       </div>
 
@@ -123,6 +131,13 @@ function App() {
         {activeTab === 'async-promise' && (
           <div>
             <AsyncPromiseApp />
+          </div>
+        )}
+
+        {/* Menampilkan Modul 4: State Management */}
+        {activeTab === 'state-management' && (
+          <div>
+            <StateManagementApp />
           </div>
         )}
       </div>
